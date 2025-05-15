@@ -71,7 +71,8 @@ nav.nav_index {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-content: space-evenly;
+    padding: 0.5rem;
+    gap: 0.5rem;
 }
 
 /* modif de la navbar + création de bouton */
@@ -221,7 +222,6 @@ footer img {
     max-width: 150px;
     width: 100%;
     max-height: 150px;
-    height: 100%;
     transition: transform .25s;
 }
 
@@ -254,14 +254,11 @@ footer p {
     }
     .container_index header{
         flex-direction: column;
-<<<<<<< HEAD
         gap: 0;
     }
     .container_index nav{
         flex-direction: column;
-        gap: 0px;
-=======
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+        gap: 2px;
     }
     
 }
@@ -293,12 +290,8 @@ header.header_about {
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     justify-content: center;
     gap: 10%;
-=======
-    justify-content: space-around;
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
     padding: 0.5rem;
 }
 
@@ -311,12 +304,8 @@ nav.nav_about {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    gap: 10%;
-=======
-    justify-content: space-evenly;
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
-    padding: 0.3rem;
+    gap: 1rem;
+    padding: 0.5rem;
 }
 
 /* Création du conteneur image 1 */
@@ -365,7 +354,6 @@ main img{
     /* Safari 3-8 */
 }
 .img_bub{
-<<<<<<< HEAD
     background-image: url(../media/bub_1.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -376,16 +364,10 @@ main img{
     margin: 5px;
     padding: 5px 5px 5px 5px ;
     
-=======
-    max-width: 400px;
-    width: 100%;
-    height: auto;
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
     transition: transform .25s;/* Pour l'effet de grossissement */
     
 }
 .img_bub:hover{
-<<<<<<< HEAD
      transform: scale(2.5);
     -ms-transform: scale(2.5);
     /* InternetExplorer 9 */
@@ -399,14 +381,6 @@ main p{
     display: flex;
     justify-content: center;
 }
-=======
-     transform: scale(2);
-    -ms-transform: scale(2);
-    /* InternetExplorer 9 */
-    -webkit-transform: scale(2);
-    /* Safari 3-8 */
-}
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
 
 
 /* Création du conteneur image 2 */
@@ -467,7 +441,7 @@ footer.footer_about {
 @media only screen and (max-width: 900px) {
     .container_about {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.75fr 1.5fr 1.5fr 1.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
         grid-template-areas:
             "header_about"
             "nav_about"
@@ -483,13 +457,14 @@ footer.footer_about {
     -webkit-transform: scale(1.3);
     /* Safari 3-8 */
 }
-<<<<<<< HEAD
 .container_about header{
         flex-direction: column;
         gap: 0px;
     }
-=======
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    .container_index nav{
+        flex-direction: column;
+        gap: 2px;
+    }
 }
 
 
@@ -518,12 +493,8 @@ header.header_service {
     text-align: center;
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     justify-content: center;
     gap: 10%;
-=======
-    justify-content: space-around;
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
     padding: 0.5rem;
 }
 
@@ -535,7 +506,7 @@ nav.nav_service {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-evenly;
+    gap: 1rem;
     padding: 0.3rem;
 }
 
@@ -643,11 +614,7 @@ footer.footer_service {
     
     .container_service {
         grid-template-columns: 1fr;
-<<<<<<< HEAD
         grid-template-rows: 0.5fr 0.5fr 0.75fr 1fr 0.75fr 0.5fr;
-=======
-        grid-template-rows: repeat(6,1fr);
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
         grid-template-areas:
             "header_service"
             "nav_service"
@@ -658,9 +625,11 @@ footer.footer_service {
     }
     .container_service header{
         flex-direction: column;
+        gap: 0;
     }
     .container_service nav{
         flex-direction: column;
+        gap: 0.5rem;
     }
 
     .img2:hover{
@@ -673,13 +642,11 @@ footer.footer_service {
     .container_service main div{
         flex-direction: column;
     }
-<<<<<<< HEAD
     .container_service header{
         flex-direction: column;
         gap: 0px;
     }
-=======
->>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    
 }
 
 
@@ -710,7 +677,8 @@ header.header_real {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 2rem;
+    justify-content: center;
     padding: 0.5rem;
 }
 
@@ -722,7 +690,7 @@ nav.nav_real {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-evenly;
+    gap: 0.5rem;
     padding: 0.3rem;
 }
 
@@ -829,7 +797,7 @@ footer.footer_real {
     
     .container_real {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6,1fr);
+        grid-template-rows: 0.5fr 0.75fr 0.75fr 1fr 0.75fr 0.5fr;
         grid-template-areas:
             "header_real"
             "nav_real"
@@ -872,7 +840,8 @@ header.header_contact {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10%;
     padding: 0.5rem;
 }
 
@@ -885,7 +854,8 @@ nav.nav_contact {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 0.3rem;
 }
 
@@ -922,7 +892,7 @@ input {
   border: 8px solid black;
   border-radius: 15px 15px 15px 0;
   font-size: 1.25em;
-  max-width: 450px;
+  max-width: 250px;
   margin-top: 30px;
   width: 100%;
   transition: 0.25s;
@@ -936,7 +906,7 @@ textarea {
   border: 8px solid black;
   border-radius: 15px 15px 15px 0;
   font-size: 1.25em;
-  max-width: 450px;
+  max-width: 250px;
   margin-top: 30px;
   width: 100%;
   font-family: "Comic Neue", cursive;
@@ -949,7 +919,7 @@ padding: 20px 30px;
 border: 8px solid black;
 border-radius: 15px 15px 15px 0;
 font-size: 1.25em;
-max-width: 530px;
+max-width: 325px;
 margin-top: 30px;
 width: 100%;
 transition: 0.25s;
@@ -1006,7 +976,7 @@ footer.footer_contact {
     
     .container_contact {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6,1fr);
+        grid-template-rows: 0.5fr 0.75fr 0.75fr 1fr  0.5fr;
         grid-template-areas:
             "header_contact"
             "nav_contact"
@@ -1020,6 +990,7 @@ footer.footer_contact {
     }
    .container_contact nav{
         flex-direction: column;
+        gap: 0.5;
     }
     .container_contact main div{
         flex-direction: column;
