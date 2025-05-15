@@ -353,33 +353,35 @@ main img{
     -webkit-transform: scale(1.5);
     /* Safari 3-8 */
 }
-.img_bub{
-    background-image: url(../media/bub_1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-width: 400px;
-    height: 100%;
-    width: 100%;
-    margin: 5px;
-    padding: 5px 5px 5px 5px ;
-    
-    transition: transform .25s;/* Pour l'effet de grossissement */
-    
+/* Création de bulles avec le texte adapté */
+.bub_1{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    width:100%;
+    max-width:450px;
 }
-.img_bub:hover{
-     transform: scale(2.5);
-    -ms-transform: scale(2.5);
-    /* InternetExplorer 9 */
-    -webkit-transform: scale(2.5);
-    /* Safari 3-8 */
-}
-main p{
-    font-size: 12px;
+.text_bub1{
+    margin-top: -1rem;
+    color: #dc3e26;
     font-weight: bold;
-    color:#dc3e26;
-    display: flex;
-    justify-content: center;
+    position:absolute;
+    padding:4rem;
+}
+
+.img_mod{
+    width: 100%;
+}
+
+
+.bub_1:hover{
+    transition: transform .25s;/* Pour l'effet de grossissement */
+     transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.8);
+    /* Safari 3-8 */
 }
 
 
@@ -451,10 +453,10 @@ footer.footer_about {
             "footer_about";
     }
     .img_bub:hover{
-     transform: scale(1.3);
-    -ms-transform: scale(1.3);
+     transform: scale(1.15);
+    -ms-transform: scale(1.15);
     /* InternetExplorer 9 */
-    -webkit-transform: scale(1.3);
+    -webkit-transform: scale(1.15);
     /* Safari 3-8 */
 }
 .container_about header{
@@ -534,25 +536,38 @@ main.sect_8 {
     padding: 5px;
 }
 
-/* class pour img  */
-.img2{
-    max-width: 400px;
-    width: 100%;
-    height: 250px;
-    transition: .25s;/* Pour l'effet de grossissement */
+/* Création de bulles avec le texte adapté */
+.bub_2{
+    position:relative;
+    width:100%;
+    max-width:450px;
 }
-.img2:hover{
-     transform: scale(2.5);
-    -ms-transform: scale(2.5);
+.text_bub2{
+    margin-top: 0rem;
+    color: #dc3e26;
+    font-weight: bold;
+    position:absolute;
+    padding:4rem;
+}
+
+.img_mod{
+    width: 100%;
+}
+
+.bub_2:hover{
+    transition: transform .25s;/* Pour l'effet de grossissement */
+     transform: scale(1.5);
+    -ms-transform: scale(1.5);
     /* InternetExplorer 9 */
-    -webkit-transform: scale(2.5);
+    -webkit-transform: scale(1.5);
     /* Safari 3-8 */
 }
 
 .img_flex {
     display: flex;
     justify-content: center;
-    gap: 20%;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* Création du conteneur image 2 */
@@ -632,11 +647,11 @@ footer.footer_service {
         gap: 0.5rem;
     }
 
-    .img2:hover{
-     transform: scale(1.4);
-    -ms-transform: scale(1.4);
+    .bub_2:hover{
+     transform: scale(1.3);
+    -ms-transform: scale(1.3);
     /* InternetExplorer 9 */
-    -webkit-transform: scale(1.4);
+    -webkit-transform: scale(1.3);
     /* Safari 3-8 */
 }
     .container_service main div{
@@ -734,8 +749,9 @@ main.sect_11 {
     /* Safari 3-8 */
 }
 
-.img_flex {
+.img_flex1 {
     display: flex;
+    gap: 1rem;
 }
 
 /* Création du conteneur image 2 */
@@ -862,7 +878,7 @@ nav.nav_contact {
 /* Création du conteneur image 1 */
 aside.sect_13 {
     border: 8px solid black;
-    background-image: url(../media/bg_com.png);
+    background-image: url(../media/bg_eye.png);
     min-width: 300px;
     background-position: center;
     background-size: cover;
@@ -882,6 +898,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items:center;
+  gap: 0.5rem;
 }
 
 input {
@@ -893,7 +910,6 @@ input {
   border-radius: 15px 15px 15px 0;
   font-size: 1.25em;
   max-width: 250px;
-  margin-top: 30px;
   width: 100%;
   transition: 0.25s;
   font-family: "Comic Neue", cursive;
@@ -907,7 +923,6 @@ textarea {
   border-radius: 15px 15px 15px 0;
   font-size: 1.25em;
   max-width: 250px;
-  margin-top: 30px;
   width: 100%;
   font-family: "Comic Neue", cursive;
   transition:0.25s;
@@ -920,11 +935,11 @@ border: 8px solid black;
 border-radius: 15px 15px 15px 0;
 font-size: 1.25em;
 max-width: 325px;
-margin-top: 30px;
 width: 100%;
 transition: 0.25s;
 font-family: "Comic Neue", cursive;
 }
+
 select option{
   background: #045074;
   color:white;
@@ -940,6 +955,10 @@ input:hover{
     /* InternetExplorer 9 */
     -webkit-transform: scale(1.2);
     /* Safari 3-8 */
+}
+
+form label{
+    visibility: hidden;
 }
 
 /*Animation sur images*/
