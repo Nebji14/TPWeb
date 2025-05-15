@@ -1,0 +1,1035 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Relief:wght@400;700&display=swap');
+
+
+/*INDEX */
+/* Modif des parametres du body */
+body{
+    font-family: "Comic Neue", cursive;
+    background-image: url(../media/bg_.png);
+    object-fit: cover;
+    background-size: cover;
+    min-height: 100vh;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Création du template area dans le body */
+.container_index {
+    display: grid;
+    grid-template-areas:
+        "header_index header_index header_index nav_index"
+        "sect_1 sect_2 sect_2 nav_index"
+        "sect_1 sect_2 sect_2 nav_index"
+        "sect_1 sect_2 sect_2 sect_3"
+        "footer_index footer_index footer_index sect_3";
+}
+
+/* Création des grid-area */
+header.header_index {
+    border: 8px solid black;
+    min-height: 15vh;
+    grid-area: header_index;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+/* Retirer le style du lien sur le strong et le positionner */
+header a{
+
+    text-decoration: none;
+    background-color: none;
+    /*pas de couleur de fond pour les liens*/
+}
+
+header img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+}
+
+/* Effet de grossissement */
+header img:hover {
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+}
+
+/* Modifs de la nav */
+nav.nav_index {
+    border: 8px solid black;
+    min-height: 40vh;
+    grid-area: nav_index;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+/* modif de la navbar + création de bouton */
+nav a {
+    font-family: "Comic Relief", system-ui;
+    color: #ffc52a;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: none;
+    background-color: #ffffff;
+    border-radius: 15px 15px 15px 0;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: 5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+nav a:hover {
+    color: #ee5454;
+    transition: 0.25s;
+    font-size: 1.7rem;
+}
+
+/* Création du conteneur image 1 */
+aside.sect_1 {
+    border: 8px solid black;
+    background-image: url(../media/bg1.png);
+    min-width: 200px;
+    background-position: center;
+    background-size: cover;
+    min-height: 70vh;
+    grid-area: sect_1;
+}
+
+/* Modif du main */
+main.sect_2 {
+    border: 8px solid black;
+    min-height: 70vh;
+    grid-area: sect_2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-transform: lowercase;
+    font-family: "Bangers", system-ui;
+    color: #2749F2;
+    -webkit-text-stroke: 0.5px white;
+    /* ajoute contour autour du texte */
+}
+
+main h2 {
+    font-size: 1.7rem;
+    color: #2749F2;
+    -webkit-text-stroke: 0.5px white;
+    /* ajoute contour autour du texte */
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-family: "Comic Relief", system-ui;
+}
+
+.bouton {
+    font-family: "Comic Relief", system-ui;
+    color: #ffc52a;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: none;
+    background-color: #ffffff;
+    border-radius: 15px 15px 15px 0;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: 5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+main .bouton:hover {
+    color: #ee5454;
+    transition: 0.25s;
+    font-size: 1.7rem;
+}
+
+/* Création du conteneur image 2 */
+aside.sect_3 {
+    border: 8px solid black;
+    background-image: url(../media/bg5.png);
+    min-width: 200px;
+    background-position: center;
+    background-size: cover;
+    min-height: 60vh;
+    grid-area: sect_3;
+}
+
+
+/*Animation sur images*/
+
+.container_index:hover .sect_1 {
+    filter: grayscale(1);
+}
+
+.container_index:hover .sect_3 {
+    filter: grayscale(1);
+}
+
+.container_index .sect_1:hover {
+    filter: grayscale(0);
+    transition: .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+.container_index .sect_3:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+/* Modif du footer */
+footer.footer_index {
+    border: 8px solid black;
+    min-height: 15vh;
+    grid-area: footer_index;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+footer img {
+    max-width: 150px;
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+    transition: transform .25s;
+}
+
+/* Effet de grossissement */
+footer img:hover {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(2);
+    /* Safari 3-8 */
+}
+
+footer p {
+    color: #f8db1f;
+    font-weight: bold;
+}
+
+/* Responsive pour mettre à la suite mes box en réduisant la page*/
+@media only screen and (max-width: 900px) {
+    .container_index {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas:
+            "header_index"
+            "nav_index"
+            "sect_1"
+            "sect_2"
+            "sect_3"
+            "footer_index";
+    }
+    .container_index header{
+        flex-direction: column;
+<<<<<<< HEAD
+        gap: 0;
+    }
+    .container_index nav{
+        flex-direction: column;
+        gap: 0px;
+=======
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    }
+    
+}
+
+
+
+
+
+
+/* PAGE ABOUT */
+
+/* Création du template area dans le body */
+.container_about {
+    display: grid;
+    grid-template-areas:
+        "header_about nav_about sect_5 sect_5 sect_4"
+        "header_about nav_about sect_5 sect_5 sect_4"
+        "header_about nav_about sect_5 sect_5 sect_6"
+        "header_about nav_about sect_5 sect_5 sect_6"
+        "footer_about footer_about footer_about footer_about footer_about";
+}
+
+/* Création des grid-area */
+header.header_about {
+    border: 8px solid black;
+    min-height: 90vh;
+    grid-area: header_about;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+<<<<<<< HEAD
+    justify-content: center;
+    gap: 10%;
+=======
+    justify-content: space-around;
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    padding: 0.5rem;
+}
+
+/* Modifs de la nav */
+nav.nav_about {
+    border: 8px solid black;
+    min-height: 90vh;
+    grid-area: nav_about;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+<<<<<<< HEAD
+    gap: 10%;
+=======
+    justify-content: space-evenly;
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    padding: 0.3rem;
+}
+
+/* Création du conteneur image 1 */
+aside.sect_4 {
+    border: 8px solid black;
+    background-image: url(../media/bg6.png);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 45vh;
+    grid-area: sect_4;
+}
+
+/* Modif du main */
+main.sect_5 {
+    border: 8px solid black;
+    min-height: 90vh;
+    grid-area: sect_5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+main img{
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+}
+
+/* class pour img  */
+.img1{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    transition: transform .25s;/* Pour l'effet de grossissement */
+    
+}
+.img1:hover{
+     transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+}
+.img_bub{
+<<<<<<< HEAD
+    background-image: url(../media/bub_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 400px;
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+    padding: 5px 5px 5px 5px ;
+    
+=======
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    transition: transform .25s;/* Pour l'effet de grossissement */
+    
+}
+.img_bub:hover{
+<<<<<<< HEAD
+     transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(2.5);
+    /* Safari 3-8 */
+}
+main p{
+    font-size: 12px;
+    font-weight: bold;
+    color:#dc3e26;
+    display: flex;
+    justify-content: center;
+}
+=======
+     transform: scale(2);
+    -ms-transform: scale(2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(2);
+    /* Safari 3-8 */
+}
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+
+
+/* Création du conteneur image 2 */
+aside.sect_6 {
+    border: 8px solid black;
+    background-image: url(../media/bg2.jpg);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 45vh;
+    grid-area: sect_6;
+}
+
+/*Animation sur images*/
+
+.container_about:hover .sect_4 {
+    filter: grayscale(1);
+}
+
+.container_about:hover .sect_6 {
+    filter: grayscale(1);
+}
+
+.container_about .sect_4:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+.container_about .sect_6:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+/* Modif du footer */
+footer.footer_about {
+    border: 8px solid black;
+    min-height: 10vh;
+    grid-area: footer_about;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .container_about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.75fr 1.5fr 1.5fr 1.5fr 0.5fr;
+        grid-template-areas:
+            "header_about"
+            "nav_about"
+            "sect_4"
+            "sect_5"
+            "sect_6"
+            "footer_about";
+    }
+    .img_bub:hover{
+     transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.3);
+    /* Safari 3-8 */
+}
+<<<<<<< HEAD
+.container_about header{
+        flex-direction: column;
+        gap: 0px;
+    }
+=======
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+}
+
+
+
+
+
+
+/* PAGE SERVICES */
+
+/* Création du template area dans le body */
+.container_service {
+    display: grid;
+    grid-template-areas:
+        "sect_7 header_service header_service header_service sect_9"
+        "sect_7 nav_service nav_service nav_service sect_9"
+        "sect_8 sect_8 sect_8 sect_8 sect_8"
+        "sect_8 sect_8 sect_8 sect_8 sect_8"
+        "footer_service footer_service footer_service footer_service footer_service";
+}
+
+/* Création des grid-area */
+header.header_service {
+    border: 8px solid black;
+    min-height: 10vh;
+    grid-area: header_service;
+    text-align: center;
+    display: flex;
+    align-items: center;
+<<<<<<< HEAD
+    justify-content: center;
+    gap: 10%;
+=======
+    justify-content: space-around;
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+    padding: 0.5rem;
+}
+
+/* Modifs de la nav */
+nav.nav_service {
+    border: 8px solid black;
+    min-height: 20vh;
+    grid-area: nav_service;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0.3rem;
+}
+
+/* Création du conteneur image 1 */
+aside.sect_7 {
+    border: 8px solid black;
+    background-image: url(../media/bg7.png);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 20vh;
+    grid-area: sect_7;
+}
+
+/* Modif du main */
+main.sect_8 {
+    border: 8px solid black;
+    min-height: 70vh;
+    grid-area: sect_8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+/* class pour img  */
+.img2{
+    max-width: 400px;
+    width: 100%;
+    height: 250px;
+    transition: .25s;/* Pour l'effet de grossissement */
+}
+.img2:hover{
+     transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(2.5);
+    /* Safari 3-8 */
+}
+
+.img_flex {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+
+/* Création du conteneur image 2 */
+aside.sect_9 {
+    border: 8px solid black;
+    background-image: url(../media/bg8.png);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 20vh;
+    grid-area: sect_9;
+}
+
+/*Animation sur images*/
+
+.container_service:hover .sect_7 {
+    filter: grayscale(1);
+}
+
+.container_service:hover .sect_9 {
+    filter: grayscale(1);
+}
+
+.container_service .sect_7:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+.container_service .sect_9:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+/* Modif du footer */
+footer.footer_service {
+    border: 8px solid black;
+    min-height: 10vh;
+    grid-area: footer_service;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .container_service {
+        grid-template-columns: 1fr;
+<<<<<<< HEAD
+        grid-template-rows: 0.5fr 0.5fr 0.75fr 1fr 0.75fr 0.5fr;
+=======
+        grid-template-rows: repeat(6,1fr);
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+        grid-template-areas:
+            "header_service"
+            "nav_service"
+            "sect_7"
+            "sect_8"
+            "sect_9"
+            "footer_service";
+    }
+    .container_service header{
+        flex-direction: column;
+    }
+    .container_service nav{
+        flex-direction: column;
+    }
+
+    .img2:hover{
+     transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.4);
+    /* Safari 3-8 */
+}
+    .container_service main div{
+        flex-direction: column;
+    }
+<<<<<<< HEAD
+    .container_service header{
+        flex-direction: column;
+        gap: 0px;
+    }
+=======
+>>>>>>> aa60ae9ed02edab88009a5674a3c4062c71d7ea0
+}
+
+
+
+
+
+
+
+
+
+/* PAGE REALISATIONS */
+
+.container_real {
+    display: grid;
+    grid-template-areas:
+        "nav_real nav_real header_real header_real header_real"
+        "sect_10 sect_12 sect_11 sect_11 sect_11"
+        "sect_10 sect_12 sect_11 sect_11 sect_11"
+        "sect_10 sect_12 sect_11 sect_11 sect_11"
+        "footer_real footer_real sect_11 sect_11 sect_11  ";
+}
+
+/* Création des grid-area */
+header.header_real {
+    border: 8px solid black;
+    min-height: 10vh;
+    grid-area: header_real;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+/* Modifs de la nav */
+nav.nav_real {
+    border: 8px solid black;
+    min-height: 20vh;
+    grid-area: nav_real;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0.3rem;
+}
+
+/* Création du conteneur image 1 */
+aside.sect_10 {
+    border: 8px solid black;
+    background-image: url(../media/bg_com.png);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 20vh;
+    grid-area: sect_10;
+}
+
+/* Modif du main */
+main.sect_11 {
+    border: 8px solid black;
+    min-height: 70vh;
+    grid-area: sect_11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.img3{
+    border: 2px solid black;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    transition: .25s;
+}
+
+.img3:hover{
+     transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.8);
+    /* Safari 3-8 */
+}
+
+.img_flex {
+    display: flex;
+}
+
+/* Création du conteneur image 2 */
+aside.sect_12 {
+    border: 8px solid black;
+    background-image: url(../media/real1.jpg);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 20vh;
+    grid-area: sect_12;
+}
+
+/*Animation sur images*/
+
+.container_real:hover .sect_10 {
+    filter: grayscale(1);
+}
+
+.container_real:hover .sect_12 {
+    filter: grayscale(1);
+}
+
+.container_real .sect_10:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+.container_real .sect_12:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+/* Modif du footer */
+footer.footer_real {
+    border: 8px solid black;
+    min-height: 10vh;
+    grid-area: footer_real;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .container_real {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas:
+            "header_real"
+            "nav_real"
+            "sect_10"
+            "sect_11"
+            "sect_12"
+            "footer_real";
+    }
+    .container_real header{
+        flex-direction: column;
+        gap: 0;
+    }
+   .container_real nav{
+        flex-direction: column;
+    }
+    .container_real main div{
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* PAGE CONTACT */
+
+.container_contact {
+    display: grid;
+    grid-template-areas:
+        "header_contact header_contact sect_13 sect_13 nav_contact "
+        "sect_14 sect_14 sect_14 sect_14 nav_contact "
+        "sect_14 sect_14 sect_14 sect_14 footer_contact"
+        "sect_14 sect_14 sect_14 sect_14 footer_contact";
+}
+
+/* Création des grid-area */
+header.header_contact {
+    border: 8px solid black;
+    min-height: 10vh;
+    grid-area: header_contact;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+/* Modifs de la nav */
+nav.nav_contact {
+    border: 8px solid black;
+    min-height: 50vh;
+    grid-area: nav_contact;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.3rem;
+}
+
+/* Création du conteneur image 1 */
+aside.sect_13 {
+    border: 8px solid black;
+    background-image: url(../media/bg_com.png);
+    min-width: 300px;
+    background-position: center;
+    background-size: cover;
+    min-height: 10vh;
+    grid-area: sect_13;
+}
+
+/* Modif du main */
+main.sect_14 {
+    border: 8px solid black;
+    min-height: 90vh;
+    grid-area: sect_14;
+    padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+input {
+  background: white;
+  color: #dc3e26;
+  font-weight: bold;
+  padding: 20px 30px;
+  border: 8px solid black;
+  border-radius: 15px 15px 15px 0;
+  font-size: 1.25em;
+  max-width: 450px;
+  margin-top: 30px;
+  width: 100%;
+  transition: 0.25s;
+  font-family: "Comic Neue", cursive;
+}
+textarea {
+  background: white;
+  color: #045074;
+  font-weight: bold;
+  padding: 20px 30px;
+  border: 8px solid black;
+  border-radius: 15px 15px 15px 0;
+  font-size: 1.25em;
+  max-width: 450px;
+  margin-top: 30px;
+  width: 100%;
+  font-family: "Comic Neue", cursive;
+  transition:0.25s;
+}
+select{
+background: white;
+color: #dc3e26;
+padding: 20px 30px;
+border: 8px solid black;
+border-radius: 15px 15px 15px 0;
+font-size: 1.25em;
+max-width: 530px;
+margin-top: 30px;
+width: 100%;
+transition: 0.25s;
+font-family: "Comic Neue", cursive;
+}
+select option{
+  background: #045074;
+  color:white;
+  margin:20px;
+  border:0;
+}
+
+input:hover{
+  transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+/*Animation sur images*/
+
+.container_contact:hover .sect_13 {
+    filter: grayscale(1);
+}
+
+.container_contact .sect_13:hover {
+    filter: grayscale(0);
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* InternetExplorer 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+}
+
+
+/* Modif du footer */
+footer.footer_contact {
+    border: 8px solid black;
+    min-height: 50vh;
+    grid-area: footer_contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .container_contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas:
+            "header_contact"
+            "nav_contact"
+            "sect_13"
+            "sect_14"
+            "footer_contact";
+    }
+    .container_contact header{
+        flex-direction: column;
+        gap: 0;
+    }
+   .container_contact nav{
+        flex-direction: column;
+    }
+    .container_contact main div{
+        flex-direction: column;
+    }
+}
+
+
+/* Classes annexes */
+
+.nav_active {
+    color: #ee5454;
+    border-radius: 15px 15px 15px 0;
+}
