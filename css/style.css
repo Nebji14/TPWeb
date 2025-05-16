@@ -3,7 +3,7 @@
 
 /*INDEX */
 /* Modif des parametres du body */
-body{
+body {
     font-family: "Comic Neue", cursive;
     background-image: url(../media/bg_.png);
     object-fit: cover;
@@ -38,13 +38,14 @@ header.header_index {
 }
 
 /* Retirer le style du lien sur le strong et le positionner */
-header a{
+header a {
 
     text-decoration: none;
     background-color: none;
     /*pas de couleur de fond pour les liens*/
 }
 
+/* modif de l'image du header */
 header img {
     max-width: 150px;
     width: 100%;
@@ -53,7 +54,7 @@ header img {
     /* Pour l'effet de grossissement */
 }
 
-/* Effet de grossissement */
+/* Effet de grossissement image header*/
 header img:hover {
     transform: scale(1.5);
     -ms-transform: scale(1.5);
@@ -91,6 +92,7 @@ nav a {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+/*Effet sur les liens de la nav bar*/
 nav a:hover {
     color: #ee5454;
     transition: 0.25s;
@@ -121,6 +123,7 @@ main.sect_2 {
     gap: 5rem;
 }
 
+/* Modif des h1 et h2 */
 main h1 {
     font-size: 4rem;
     text-transform: lowercase;
@@ -140,6 +143,7 @@ main h2 {
     font-family: "Comic Relief", system-ui;
 }
 
+/* création d'un classe pour un bouton */
 .bouton {
     font-family: "Comic Relief", system-ui;
     color: #ffc52a;
@@ -155,13 +159,14 @@ main h2 {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+/* effet de hover sur le bouton */
 main .bouton:hover {
     color: #ee5454;
     transition: 0.25s;
     font-size: 1.7rem;
 }
 
-/* Création du conteneur image 2 */
+/* Création du conteneur image */
 aside.sect_3 {
     border: 8px solid black;
     background-image: url(../media/bg5.png);
@@ -175,6 +180,7 @@ aside.sect_3 {
 
 /*Animation sur images*/
 
+/* quand le curseur est sur la page les image deviennent grise */
 .container_index:hover .sect_1 {
     filter: grayscale(1);
 }
@@ -183,6 +189,7 @@ aside.sect_3 {
     filter: grayscale(1);
 }
 
+/* en passant le curseur sur l'image reprend de la couleur et grossie*/
 .container_index .sect_1:hover {
     filter: grayscale(0);
     transition: .25s;
@@ -218,6 +225,7 @@ footer.footer_index {
 
 }
 
+/* modif de l'image du footer */
 footer img {
     max-width: 150px;
     width: 100%;
@@ -225,7 +233,7 @@ footer img {
     transition: transform .25s;
 }
 
-/* Effet de grossissement */
+/* Effet de grossissement de l'image du footer */
 footer img:hover {
     transform: scale(2);
     -ms-transform: scale(2);
@@ -234,16 +242,17 @@ footer img:hover {
     /* Safari 3-8 */
 }
 
+/* modif du texte du footer */
 footer p {
     color: #f8db1f;
     font-weight: bold;
 }
 
-/* Responsive pour mettre à la suite mes box en réduisant la page*/
+/* Responsive pour mettre à la suite mes box en réduisant la page + adaptation de la direction des elements*/
 @media only screen and (max-width: 900px) {
     .container_index {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6,1fr);
+        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
             "header_index"
             "nav_index"
@@ -252,15 +261,16 @@ footer p {
             "sect_3"
             "footer_index";
     }
-    .container_index header{
+
+    .container_index header {
         flex-direction: column;
         gap: 0;
     }
-    .container_index nav{
+
+    .container_index nav {
         flex-direction: column;
         gap: 2px;
     }
-    
 }
 
 
@@ -308,7 +318,7 @@ nav.nav_about {
     padding: 0.5rem;
 }
 
-/* Création du conteneur image 1 */
+/* Création du conteneur image */
 aside.sect_4 {
     border: 8px solid black;
     background-image: url(../media/bg6.png);
@@ -332,52 +342,60 @@ main.sect_5 {
     padding: 5px;
 }
 
-main img{
+/* modif des images du main */
+main img {
     max-width: 700px;
     width: 100%;
     height: auto;
 }
 
-/* class pour img  */
-.img1{
+/* class pour img de comics-book  */
+.img1 {
     max-width: 250px;
     width: 100%;
     height: auto;
-    transition: transform .25s;/* Pour l'effet de grossissement */
-    
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+
 }
-.img1:hover{
-     transform: scale(1.5);
+
+/* effet de grossissement pour l'image du comics-book */
+.img1:hover {
+    transform: scale(1.5);
     -ms-transform: scale(1.5);
     /* InternetExplorer 9 */
     -webkit-transform: scale(1.5);
     /* Safari 3-8 */
 }
+
 /* Création de bulles avec le texte adapté */
-.bub_1{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    width:100%;
-    max-width:450px;
+.bub_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
 }
-.text_bub1{
+
+/* position du texte dans la bulle */
+.text_bub1 {
     margin-top: -1rem;
     color: #dc3e26;
     font-weight: bold;
-    position:absolute;
-    padding:4rem;
+    position: absolute;
+    padding: 4rem;
 }
 
-.img_mod{
+.img_mod {
     width: 100%;
 }
 
-
-.bub_1:hover{
-    transition: transform .25s;/* Pour l'effet de grossissement */
-     transform: scale(1.8);
+/* effet sur l'image bulle */
+.bub_1:hover {
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.8);
     -ms-transform: scale(1.8);
     /* InternetExplorer 9 */
     -webkit-transform: scale(1.8);
@@ -385,7 +403,7 @@ main img{
 }
 
 
-/* Création du conteneur image 2 */
+/* Création du conteneur image */
 aside.sect_6 {
     border: 8px solid black;
     background-image: url(../media/bg2.jpg);
@@ -440,6 +458,7 @@ footer.footer_about {
     text-align: center;
 }
 
+/* responsive */
 @media only screen and (max-width: 900px) {
     .container_about {
         grid-template-columns: 1fr;
@@ -452,18 +471,21 @@ footer.footer_about {
             "sect_6"
             "footer_about";
     }
-    .img_bub:hover{
-     transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    /* InternetExplorer 9 */
-    -webkit-transform: scale(1.15);
-    /* Safari 3-8 */
-}
-.container_about header{
+
+    .img_bub:hover {
+        transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        /* InternetExplorer 9 */
+        -webkit-transform: scale(1.15);
+        /* Safari 3-8 */
+    }
+
+    .container_about header {
         flex-direction: column;
         gap: 0px;
     }
-    .container_index nav{
+
+    .container_index nav {
         flex-direction: column;
         gap: 2px;
     }
@@ -537,32 +559,36 @@ main.sect_8 {
 }
 
 /* Création de bulles avec le texte adapté */
-.bub_2{
-    position:relative;
-    width:100%;
-    max-width:450px;
+.bub_2 {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
 }
-.text_bub2{
+
+/* le texte dans les bulles */
+.text_bub2 {
     margin-top: 0rem;
     color: #dc3e26;
     font-weight: bold;
-    position:absolute;
-    padding:4rem;
+    position: absolute;
+    padding: 4rem;
 }
 
-.img_mod{
+.img_mod {
     width: 100%;
 }
 
-.bub_2:hover{
-    transition: transform .25s;/* Pour l'effet de grossissement */
-     transform: scale(1.5);
+.bub_2:hover {
+    transition: transform .25s;
+    /* Pour l'effet de grossissement */
+    transform: scale(1.5);
     -ms-transform: scale(1.5);
     /* InternetExplorer 9 */
     -webkit-transform: scale(1.5);
     /* Safari 3-8 */
 }
 
+/* pour aligner les bulles avec un ecart */
 .img_flex {
     display: flex;
     justify-content: center;
@@ -625,8 +651,9 @@ footer.footer_service {
     text-align: center;
 }
 
+/* responsive */
 @media only screen and (max-width: 900px) {
-    
+
     .container_service {
         grid-template-columns: 1fr;
         grid-template-rows: 0.5fr 0.5fr 0.75fr 1fr 0.75fr 0.5fr;
@@ -638,30 +665,34 @@ footer.footer_service {
             "sect_9"
             "footer_service";
     }
-    .container_service header{
+
+    .container_service header {
         flex-direction: column;
         gap: 0;
     }
-    .container_service nav{
+
+    .container_service nav {
         flex-direction: column;
         gap: 0.5rem;
     }
 
-    .bub_2:hover{
-     transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    /* InternetExplorer 9 */
-    -webkit-transform: scale(1.3);
-    /* Safari 3-8 */
-}
-    .container_service main div{
+    .bub_2:hover {
+        transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        /* InternetExplorer 9 */
+        -webkit-transform: scale(1.3);
+        /* Safari 3-8 */
+    }
+
+    .container_service main div {
         flex-direction: column;
     }
-    .container_service header{
+
+    .container_service header {
         flex-direction: column;
         gap: 0px;
     }
-    
+
 }
 
 
@@ -733,7 +764,8 @@ main.sect_11 {
     padding: 5px;
 }
 
-.img3{
+/* class de modif des images */
+.img3 {
     border: 2px solid black;
     max-width: 250px;
     width: 100%;
@@ -741,14 +773,15 @@ main.sect_11 {
     transition: .25s;
 }
 
-.img3:hover{
-     transform: scale(1.8);
+.img3:hover {
+    transform: scale(1.8);
     -ms-transform: scale(1.8);
     /* InternetExplorer 9 */
     -webkit-transform: scale(1.8);
     /* Safari 3-8 */
 }
 
+/* alignement des images */
 .img_flex1 {
     display: flex;
     gap: 1rem;
@@ -809,8 +842,9 @@ footer.footer_real {
     text-align: center;
 }
 
+/* responsive */
 @media only screen and (max-width: 900px) {
-    
+
     .container_real {
         grid-template-columns: 1fr;
         grid-template-rows: 0.5fr 0.75fr 0.75fr 1fr 0.75fr 0.5fr;
@@ -822,14 +856,17 @@ footer.footer_real {
             "sect_12"
             "footer_real";
     }
-    .container_real header{
+
+    .container_real header {
         flex-direction: column;
         gap: 0;
     }
-   .container_real nav{
+
+    .container_real nav {
         flex-direction: column;
     }
-    .container_real main div{
+
+    .container_real main div {
         flex-direction: column;
     }
 }
@@ -893,62 +930,66 @@ main.sect_14 {
     grid-area: sect_14;
     padding: 5px;
 }
+
 /* Modif du formulaire */
 form {
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 input {
-  background: white;
-  color: #dc3e26;
-  font-weight: bold;
-  padding: 20px 30px;
-  border: 8px solid black;
-  border-radius: 15px 15px 15px 0;
-  font-size: 1.25em;
-  max-width: 250px;
-  width: 100%;
-  transition: 0.25s;
-  font-family: "Comic Neue", cursive;
+    background: white;
+    color: #dc3e26;
+    font-weight: bold;
+    padding: 20px 30px;
+    border: 8px solid black;
+    border-radius: 15px 15px 15px 0;
+    font-size: 1.25em;
+    max-width: 250px;
+    width: 100%;
+    transition: 0.25s;
+    font-family: "Comic Neue", cursive;
 }
+
 textarea {
-  background: white;
-  color: #045074;
-  font-weight: bold;
-  padding: 20px 30px;
-  border: 8px solid black;
-  border-radius: 15px 15px 15px 0;
-  font-size: 1.25em;
-  max-width: 250px;
-  width: 100%;
-  font-family: "Comic Neue", cursive;
-  transition:0.25s;
-}
-select{
-background: white;
-color: #dc3e26;
-padding: 20px 30px;
-border: 8px solid black;
-border-radius: 15px 15px 15px 0;
-font-size: 1.25em;
-max-width: 325px;
-width: 100%;
-transition: 0.25s;
-font-family: "Comic Neue", cursive;
+    background: white;
+    color: #045074;
+    font-weight: bold;
+    padding: 20px 30px;
+    border: 8px solid black;
+    border-radius: 15px 15px 15px 0;
+    font-size: 1.25em;
+    max-width: 250px;
+    width: 100%;
+    font-family: "Comic Neue", cursive;
+    transition: 0.25s;
 }
 
-select option{
-  background: #045074;
-  color:white;
-  margin:20px;
-  border:0;
+select {
+    background: white;
+    color: #dc3e26;
+    padding: 20px 30px;
+    border: 8px solid black;
+    border-radius: 15px 15px 15px 0;
+    font-size: 1.25em;
+    max-width: 325px;
+    width: 100%;
+    transition: 0.25s;
+    font-family: "Comic Neue", cursive;
 }
 
-input:hover{
-  transition: transform .25s;
+select option {
+    background: #045074;
+    color: white;
+    margin: 20px;
+    border: 0;
+}
+
+/* effet de hover sur les imput du formulaire */
+input:hover {
+    transition: transform .25s;
     /* Pour l'effet de grossissement */
     transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -957,7 +998,7 @@ input:hover{
     /* Safari 3-8 */
 }
 
-form label{
+form label {
     visibility: hidden;
 }
 
@@ -991,11 +1032,12 @@ footer.footer_contact {
     text-align: center;
 }
 
+/* responsive */
 @media only screen and (max-width: 900px) {
-    
+
     .container_contact {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.75fr 0.75fr 1fr  0.5fr;
+        grid-template-rows: 0.5fr 0.75fr 0.75fr 1fr 0.5fr;
         grid-template-areas:
             "header_contact"
             "nav_contact"
@@ -1003,15 +1045,18 @@ footer.footer_contact {
             "sect_14"
             "footer_contact";
     }
-    .container_contact header{
+
+    .container_contact header {
         flex-direction: column;
         gap: 0;
     }
-   .container_contact nav{
+
+    .container_contact nav {
         flex-direction: column;
         gap: 0.5;
     }
-    .container_contact main div{
+
+    .container_contact main div {
         flex-direction: column;
     }
 }
@@ -1019,6 +1064,7 @@ footer.footer_contact {
 
 /* Classes annexes */
 
+/* laisse en couleur la page active dans la nav */
 .nav_active {
     color: #ee5454;
     border-radius: 15px 15px 15px 0;
