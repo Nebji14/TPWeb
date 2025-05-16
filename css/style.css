@@ -1,7 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Relief:wght@400;700&display=swap');
 
 
-/*INDEX */
+
+
+/* Effet pour passer d'une page à l'autre */
+/* Animation de glissement (slide in) */
+.slide-in {
+    transform: translateX(100%);  /* déplace à droite au départ */
+    animation: slideIn 1s ease-out forwards; /* animation d'entrée */
+}
+/* Définition de l'animation "slideIn" (entrée) */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);  /* revient à sa position normale */
+    }
+}
+
+
+
 /* Modif des parametres du body */
 body {
     font-family: "Comic Neue", cursive;
@@ -13,6 +29,8 @@ body {
     padding: 0;
     margin: 0;
 }
+
+/*INDEX */
 
 /* Création du template area dans le body */
 .container_index {

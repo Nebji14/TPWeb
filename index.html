@@ -60,6 +60,31 @@
             <p>©Copyright ComicsCreator 2025</p>
         </div>
     </footer>
+
+    <!-- js pour l'animation de transition d'une page à l'autre -->
+   <script>
+    // Ajout de l'animation de slide de droite à gauche
+    document.body.classList.add('slide-in');
+    //  Ajoute l'effet "slide vers le haut"
+            document.body.classList.add("slide-up");
+
+    // Animation de départ sur clic de lien
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            const url = link.getAttribute("href");
+
+            // Ignore les ancres ou liens externes
+            if (url.startsWith("http") || url.startsWith("#")) return;
+
+            // Attend que l'animation se termine avant de changer de page
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // même durée que dans le CSS
+        });
+    });
+</script>
 </body>
 
 </html>
