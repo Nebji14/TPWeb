@@ -893,7 +893,7 @@ main.sect_14 {
     grid-area: sect_14;
     padding: 5px;
 }
-
+/* Modif du formulaire */
 form {
   display: flex;
   flex-direction: column;
