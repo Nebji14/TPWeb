@@ -44,7 +44,7 @@ body {
 }
 
 /* Création des grid-area */
-header.header_index {
+.header_index {
     border: 8px solid black;
     min-height: 15vh;
     grid-area: header_index;
@@ -118,7 +118,7 @@ nav a:hover {
 }
 
 /* Création du conteneur image 1 */
-aside.sect_1 {
+.sect_1 {
     border: 8px solid black;
     background-image: url(../media/bg1.png);
     min-width: 200px;
@@ -129,7 +129,7 @@ aside.sect_1 {
 }
 
 /* Modif du main */
-main.sect_2 {
+.sect_2 {
     border: 8px solid black;
     min-height: 70vh;
     grid-area: sect_2;
